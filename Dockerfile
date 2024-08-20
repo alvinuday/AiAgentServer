@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Optionally: Copy the .env file (if needed during the build process)
 # You can skip this if you want to pass .env during runtime using --env-file
-COPY .env /app/.env
+# COPY .env /app/.env
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
