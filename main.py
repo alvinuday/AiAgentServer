@@ -5,6 +5,7 @@ from langgraph.graph import StateGraph
 from langgraph.graph.message import add_messages
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from langserve import add_routes
 import uvicorn
 from dotenv import load_dotenv
@@ -84,6 +85,7 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["*"],
 )
+app.add_middleware(HTTPSRedirectMiddleware)
 add_routes(
     app, graph, path = "/graph"
 ) 
