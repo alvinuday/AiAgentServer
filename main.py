@@ -91,7 +91,7 @@ add_routes(
 ) 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host=service_url, port=8000)
+    uvicorn.run(app, host="https://aiagentserver-yvfifalxwa-em.a.run.app", port=8000)
 # final = graph.invoke({"messages": ["Hello!"]})
 # print(final['messages'])
 # while True:
