@@ -81,10 +81,12 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
     expose_headers=["*"],
+    # Add the following lines to allow HTTP OPTIONS requests
+    allow_methods=["*", "OPTIONS"],
+    allow_headers=["*", "Access-Control-Allow-Headers"],
 )
+# app.add_middleware(HTTPSRedirectMiddleware, exclude_paths=["/graph/stream/"])
 # app.add_middleware(HTTPSRedirectMiddleware)
 add_routes(
     app, graph, path = "/graph"
