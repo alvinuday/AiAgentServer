@@ -87,7 +87,7 @@ app.add_middleware(
     allow_headers=["*", "Access-Control-Allow-Headers"],
 )
 # app.add_middleware(HTTPSRedirectMiddleware, exclude_paths=["/graph/stream/"])
-app.add_middleware(HTTPSRedirectMiddleware)
+# app.add_middleware(HTTPSRedirectMiddleware)
 add_routes(
     app, graph, path = "/graph"
 ) 
