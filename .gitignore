@@ -1,2 +1,6 @@
 .env
 testenv
+detrace.systems.key
+# fullchain.pem
+# sslkey.pem
+your_domain.csr
