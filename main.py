@@ -92,9 +92,11 @@ add_routes(
     app, graph, path = "/graph"
 ) 
 
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="0.0.0.0", port=8000, ssl_keyfile="key.pem",
+#         ssl_certfile="cert.pem")
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, ssl_keyfile="key.pem",
-        ssl_certfile="cert.pem")
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 # final = graph.invoke({"messages": ["Hello!"]})
 # print(final['messages'])
 # while True:
